@@ -1,0 +1,79 @@
+#include "manghoadon.h"
+void manghoadon::in(int& n) {
+	bill.resize(n);
+	for (int i = 0; i < bill.size(); i++) {
+		cout << "hoa don " << i + 1 << endl;
+		cin >> bill[i];
+	}
+}
+void manghoadon::out(int n) {
+	cout << "Xuat ra mang cac phan tu hoa don" << endl;
+	for (int i = 0; i < bill.size(); i++) {
+		cout << "hoa don " << i + 1 << endl;
+		cout << bill[i];
+	}
+}
+void manghoadon::totalin(int& n) {
+	int _totalbill = 0;
+	bill.resize(n);
+	for (int i = 0; i < bill.size(); i++) {
+		_totalbill += bill[i].gettotal();
+	}
+	totalbill = _totalbill;
+}
+void manghoadon::totalout(int n) {
+	for (int i = 0; i < bill.size(); i++)
+	{
+		cout << "So thu tu: " << i + 1 << endl;
+		cout << bill[i];
+	}
+	cout << "Tong tien: " << totalbill << "(USD)" << endl;
+}
+void manghoadon::add(hoadon& bill1) {
+	int position, _totalbill = 0;
+	int i;
+	cout << "Nhap vi tri muon them hoa don" << endl;
+	cin >> position;
+	bill.insert(bill.begin() + position - 1, bill1);
+	for (i = 0; i < bill.size(); i++) {
+		if (bill[i].getbook() == bill1.getbook()) {
+			int add_amount = bill[i].getamount() + bill1.getamount();
+			bill[i].setamount(add_amount);
+			int add_total = bill[i].gettotal() + bill1.gettotal();
+			bill[i].settotal(add_total);
+			_totalbill += bill[i].gettotal();
+		}
+		else _totalbill += bill[i].gettotal();
+	}
+	totalbill = _totalbill;
+}
+void manghoadon::find() {
+	string str;
+	cout << "Nhap vao ten sach muon tim trong hoa don" << endl;
+	cin >> str;
+	for (int i = 0; i < bill.size(); i++) {
+		if (str == bill.at(i).getbook().getname()) cout << bill[i];
+	}
+}
+void manghoadon::dest() {
+	int position, _totalbill = 0, remove_amount;
+	int i;
+	string str;
+	cout << "Nhap vao ten sach muon xoa trong hoa don" << endl;
+	cin >> str;
+	cout << "Nhap so luong muon loai bo" << endl;
+	cin >> remove_amount;
+	
+	for (i = 0; i < bill.size(); i++) {
+		if (remove_amount<bill[i].getamount()) {
+			int add_amount = bill[i].getamount() + bill1.getamount();
+			bill[i].setamount(add_amount);
+			int add_total = bill[i].gettotal() + bill1.gettotal();
+			bill[i].settotal(add_total);
+			_totalbill += bill[i].gettotal();
+		}
+		else _totalbill += bill[i].gettotal();
+	}
+	bill.erase(bill.begin() + position - 1);
+	totalbill = _totalbill;
+}
