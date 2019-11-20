@@ -12,4 +12,3 @@ public:
 	virtual void dest();
 	void updateprice();
 };
-

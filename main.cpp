@@ -35,5 +35,6 @@ void main() {
 	//arrbill.totalin(n);
 	//arrbill.totalout(n);
 	//arrbill.find();
-
+	arrbill.dest();
+	arrbill.totalout(n);
 }

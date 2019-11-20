@@ -56,24 +56,27 @@ void manghoadon::find() {
 	}
 }
 void manghoadon::dest() {
-	int position, _totalbill = 0, remove_amount;
+	int position, _totalbill = totalbill, remove;
 	int i;
 	string str;
 	cout << "Nhap vao ten sach muon xoa trong hoa don" << endl;
 	cin >> str;
 	cout << "Nhap so luong muon loai bo" << endl;
-	cin >> remove_amount;
-	
-	for (i = 0; i < bill.size(); i++) {
-		if (remove_amount<bill[i].getamount()) {
-			int add_amount = bill[i].getamount() + bill1.getamount();
-			bill[i].setamount(add_amount);
-			int add_total = bill[i].gettotal() + bill1.gettotal();
-			bill[i].settotal(add_total);
-			_totalbill += bill[i].gettotal();
-		}
-		else _totalbill += bill[i].gettotal();
+	cin >> remove;
+	for (i = 0; i < bill.size(); i++)
+	{
+		if (bill[i].getbook().getname() == str) break;
 	}
-	bill.erase(bill.begin() + position - 1);
+	if (remove < bill[i].getamount()) {
+		int _removed = bill[i].getamount() - remove;
+		bill[i].setamount(_removed);
+		int _removedtotal = _removed * bill[i].getbook().getprice();
+		bill[i].settotal(_removedtotal);
+		_totalbill = _removedtotal;
+	}
+	else {
+		_totalbill -= bill[i].gettotal();
+		bill.erase(bill.begin() + i);
+	}
 	totalbill = _totalbill;
 }

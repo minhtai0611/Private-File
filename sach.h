@@ -29,4 +29,3 @@ public:
 	const bool& operator==(const sach& s);
 	const sach& operator=(const sach& s);
 };
-

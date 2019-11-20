@@ -50,10 +50,10 @@ ostream& operator<<(ostream& out, hoadon& bill) {
 	return out;
 }
 const bool& hoadon::operator==(const hoadon& bill)
-{   
-	return(book==bill.book && amount == bill.amount && total == bill.total);
+{
+	return(book == bill.book && amount == bill.amount && total == bill.total);
 }
-const hoadon& hoadon::operator=(const hoadon& bill) {
+const hoadon& hoadon::operator=(const hoadon & bill) {
 	book = bill.book;
 	amount = bill.amount;
 	total = bill.total;
