@@ -25,19 +25,9 @@
 //	
 //}
 istream& operator>>(istream& in, hoadon& bill) {
-	int n, number;
-	cin >> n;
-	cout << endl;
-	vector<sach>s;
-	s.resize(n);
-	for (int i = 0; i < s.size(); i++) {
-		cout << "sach: " << i + 1 << endl;
-		in >> s[i];
-	}
-	cout << "Nhap vao sach muon mua: ";
-	cin >> number;
-	cout << endl;
-	bill.book = s[number - 1];
+	int number;
+	cout << "Nhap sach " << endl;
+	in >> bill.book;
 	cout << "Nhap so luong: ";
 	in >> bill.amount;
 	cout << endl;
@@ -50,10 +40,10 @@ ostream& operator<<(ostream& out, hoadon& bill) {
 	return out;
 }
 const bool& hoadon::operator==(const hoadon& bill)
-{
-	return(book == bill.book && amount == bill.amount && total == bill.total);
+{   
+	return(book==bill.book && amount == bill.amount && total == bill.total);
 }
-const hoadon& hoadon::operator=(const hoadon & bill) {
+const hoadon& hoadon::operator=(const hoadon& bill) {
 	book = bill.book;
 	amount = bill.amount;
 	total = bill.total;

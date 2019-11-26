@@ -11,6 +11,8 @@ private:
 	string publisher;
 	int id;
 	int price;
+	bool bool_author;
+	bool bool_publisher;
 public:
 	string getname() { return name; }
 	string gettype() { return type; }
@@ -28,4 +30,11 @@ public:
 	friend ostream& operator<<(ostream& out, sach& s);
 	const bool& operator==(const sach& s);
 	const sach& operator=(const sach& s);
+	void showauthor();
+	void showpublisher();
+	void hideauthor();
+	void hidepublisher();
+	bool checkauthor();
+	bool checkpublisher();
 };
+

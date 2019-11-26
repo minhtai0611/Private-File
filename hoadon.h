@@ -9,7 +9,7 @@ private:
 	int total = amount * book.getprice();
 public:
 	sach getbook() { return book; }
-	int gettotal() { return amount * book.getprice(); }
+	int gettotal() { return amount*book.getprice(); }
 	int getamount() { return amount; }
 	void settotal(int& _total) { total = _total; }
 	void setamount(int& _amount) { amount = _amount; }

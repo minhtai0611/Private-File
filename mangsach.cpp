@@ -1,5 +1,5 @@
 #include "mangsach.h"
-void mangsach::in(int& n) {
+void mangsach::in(int &n) {
 	int i;
 	s.resize(n);
 	for (i = 0; i < s.size(); i++) {
@@ -14,12 +14,12 @@ void mangsach::out(int n) {
 		cout << s[i];
 	}
 }
-void mangsach::add(sach& s1) {
+void mangsach::add(sach &s1) {
 	int position;
 	for (int i = 0; i < s.size(); i++) {
 		cout << "Nhap vi tri muon them sach" << endl;
 		cin >> position;
-		s.insert(s.begin() + position - 1, s1);
+		s.insert(s.begin()+position-1, s1);
 		break;
 	}
 }
@@ -28,7 +28,7 @@ void mangsach::find() {
 	cout << "Nhap ten sach trong mang: " << endl;
 	cin >> str;
 	for (int i = 0; i < s.size(); i++) {
-		if (str == s.at(i).getname()) {
+		if (str==s.at(i).getname()) {
 			cout << s[i];
 		}
 	}
@@ -38,7 +38,7 @@ void mangsach::dest() {
 	cout << "Nhap ten sach trong mang: " << endl;
 	cin >> str;
 	for (int i = 0; i < s.size(); i++) {
-		if (str == s.at(i).getname()) {
+		if (str==s.at(i).getname()) {
 			s.erase(s.begin() + i);
 		}
 	}
@@ -55,4 +55,10 @@ void mangsach::updateprice() {
 			s[i].setprice(newprice);
 		}
 	}
+}
+vector<sach*> mangsach::getarrbook() {
+	vector<sach*> arrbook;
+	int n = s.size();
+	for (int i = 0; i < n; i++) arrbook.push_back(&s[i]);
+	return arrbook;
 }
