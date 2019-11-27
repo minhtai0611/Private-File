@@ -23,4 +23,3 @@ void user::out(int n) {
 void user::outbill(int n) {
 	arrbill.totalout(n);
 }
-

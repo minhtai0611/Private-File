@@ -13,4 +13,3 @@ public:
 	void updateprice();
 	vector<sach*> getarrbook();
 };
-

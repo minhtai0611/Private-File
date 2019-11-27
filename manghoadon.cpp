@@ -57,7 +57,7 @@ void manghoadon::find() {
 }
 void manghoadon::dest() {
 	int _totalbill = totalbill, _remove;
-	
+
 	string str;
 	cout << "Nhap vao ten sach muon loai bo khoi hoa don " << endl;
 	cin >> str;

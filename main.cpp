@@ -2,6 +2,7 @@
 #include"mangsach.h"
 #include"hoadon.h"
 #include"manghoadon.h"
+#include"author.h"
 void main() {
 	/*mangsach arr;
 	int n;
@@ -23,11 +24,11 @@ void main() {
 	/*hoadon bill;
 	cin >> bill;
 	cout << bill;*/
-	manghoadon arrbill;
+	/*manghoadon arrbill;
 	int n;
 	cout << "So luong hoa don: ";
 	cin >> n;
-	arrbill.in(n);
+	arrbill.in(n);*/
 	/*hoadon bill1;
 	cout << "Hoa don can them vao danh sach " << endl;
 	cin >> bill1;
@@ -35,6 +36,6 @@ void main() {
 	//arrbill.totalin(n);
 	//arrbill.totalout(n);
 	//arrbill.find();
-	arrbill.dest();
-	arrbill.totalout(n);
+	/*arrbill.dest();
+	arrbill.totalout(n);*/
 }

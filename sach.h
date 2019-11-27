@@ -37,4 +37,3 @@ public:
 	bool checkauthor();
 	bool checkpublisher();
 };
-

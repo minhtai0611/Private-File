@@ -1,32 +1,44 @@
 #include "author.h"
 void author::find() {
-
+	mangsach arrbook;
+	arrbook.find();
 }
-sach author::default_author_book(sach& book1) {
-	string name_book, type_book, default_author_book;
-	int price_book;
-	int id_book=18120544;
-	string publisher_book = "NULL";
-	cout << "Nhap ten sach: ";
-	cin >> name_book;
-	cout << endl;
-	book1.setname(name_book);
-	book1.setid(id_book);
-	cout << "Nhap the loai: ";
-	cin >> type_book;
-	cout << endl;
-	cout << "Nhap gia tien: ";
-	cin >> price_book;
-	cout << endl;
-	book1.setprice(price_book);
-	book1.setpublisher(publisher_book);
-	default_author_book = getaccount_user();
-	book1.setauthor(default_author_book);
-	return book1;
-}
+//sach author::default_author_book(sach& book1) {
+//	string name_book, type_book, default_author_book, publisher_book;
+//	int price_book, id_book;
+//	//Set up a default author
+//	cout << "Nhap ten sach: ";
+//	cin >> name_book;
+//	book1.setname(name_book);
+//	cout << endl;
+//	////////////////////////
+//	cout << "Nhap ma sach: ";
+//	book1.setid(id_book);
+//	cin >> id_book;
+//	////////////////////////
+//	cout << "Nhap the loai: ";
+//	cin >> type_book;
+//	book1.settype(type_book);
+//	cout << endl;
+//	////////////////////////
+//	cout << "Nhap gia tien: ";
+//	cin >> price_book;
+//	book1.setprice(price_book);
+//	cout << endl;
+//	///////////////////////
+//	cout << "Nhap tac gia: ";
+//	default_author_book = getaccount_user();
+//	book1.setauthor(default_author_book);
+//	cout << endl;
+//	///////////////////////
+//	cout << "Nhap nha xuat ban: ";
+//	cin >> publisher_book;
+//	book1.setpublisher(publisher_book);
+//	
+//	return book1;
+//}
 void author::add(sach& book1) {
 	mangsach arrbook;
-	cout << book1;
 	arrbook.add(book1);
 }
 void author::dest() {

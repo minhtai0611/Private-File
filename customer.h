@@ -1,6 +1,6 @@
 #pragma once
 #include"mangsach.h"
-class customer: public mangsach
+class customer : public mangsach
 {
 protected:
 	string gender_customer;
@@ -10,4 +10,3 @@ public:
 	void out();
 	void find();
 };
-

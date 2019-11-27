@@ -29,10 +29,10 @@ ostream& operator<<(ostream& out, sach& s) {
 		"Gia tien: " << s.price << "(USD/things)" << endl;
 	return out;
 }
-const bool& sach::operator==(const sach& s){
+const bool& sach::operator==(const sach& s) {
 	return (name == s.name && id == s.id && type == s.type && author == s.author && publisher == s.publisher && price == s.price);
 }
-const sach& sach::operator=(const sach& s) {
+const sach& sach::operator=(const sach & s) {
 	name = s.name;
 	id = s.id;
 	type = s.type;
@@ -45,7 +45,7 @@ void sach::showauthor() {
 	bool_author = true;
 }
 void sach::showpublisher() {
-	bool_publisher =true;
+	bool_publisher = true;
 }
 void sach::hideauthor() {
 	bool_author = false;

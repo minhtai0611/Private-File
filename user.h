@@ -1,7 +1,7 @@
 #pragma once
 #include"customer.h"
 #include"manghoadon.h"
-class user:public customer
+class user :public customer
 {
 private:
 	string default_account_user = "user";
@@ -28,4 +28,3 @@ public:
 	virtual void out(int n);
 	void outbill(int n);
 };
-
