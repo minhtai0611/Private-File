@@ -12,4 +12,6 @@ public:
 	virtual void dest();
 	void updateprice();
 	vector<sach*> getarrbook();
+	vector<sach> find_book(string _name);
+	void update_book();
 };

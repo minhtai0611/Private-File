@@ -32,7 +32,7 @@ ostream& operator<<(ostream& out, sach& s) {
 const bool& sach::operator==(const sach& s) {
 	return (name == s.name && id == s.id && type == s.type && author == s.author && publisher == s.publisher && price == s.price);
 }
-const sach& sach::operator=(const sach & s) {
+const sach& sach::operator=(const sach& s) {
 	name = s.name;
 	id = s.id;
 	type = s.type;

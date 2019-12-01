@@ -2,7 +2,9 @@
 #include"user.h"
 class author :public user
 {
+
 public:
+	author() {	setdefault_account_user("author");	}
 	void find();
 	/*sach default_author_book(sach& book1);*/
 	void add(sach& book1);

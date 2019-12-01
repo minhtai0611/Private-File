@@ -1,12 +1,12 @@
 #pragma once
 #include"mangsach.h"
-class customer : public mangsach
+class customer
 {
 protected:
 	string gender_customer;
 	string name_customer;
 	int age_customer;
 public:
-	void out();
-	void find();
+	void out(vector<sach> s);
+	vector<sach> find(mangsach _arrbook, string name);
 };

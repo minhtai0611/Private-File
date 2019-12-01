@@ -33,6 +33,7 @@ void mangsach::find() {
 		}
 	}
 }
+
 void mangsach::dest() {
 	string str;
 	cout << "Nhap ten sach trong mang: " << endl;
@@ -54,11 +55,52 @@ void mangsach::updateprice() {
 			cin >> newprice;
 			s[i].setprice(newprice);
 		}
+		else {
+			cout << "Cap nhat gia tien that bai" << endl;
+		}
 	}
+}
+vector<sach> mangsach::find_book(string _name) {
+	vector<sach> _arrbook;
+	int n = s.size();
+	for (int i = 0; i < n; i++) {
+		if (_arrbook[i].getname() == _name) _arrbook.push_back(s[i]);
+	}
+	return _arrbook;
 }
 vector<sach*> mangsach::getarrbook() {
 	vector<sach*> arrbook;
 	int n = s.size();
 	for (int i = 0; i < n; i++) arrbook.push_back(&s[i]);
 	return arrbook;
+}
+void mangsach::update_book() {
+	string name_book, type_book, author_book, publisher_book;
+	int position_book, price_book, id_book;
+	int n = s.size();
+	cout << "Nhap sach can cap nhat thong tin: ";
+	cin >> name_book;
+	for (int i = 0; i < s.size(); i++) {
+		if (name_book == s.at(i).getname()) {
+			cout << "Nhap ten sach can cap nhat: " << endl;
+			cin >> name_book;
+			s[i].setname(name_book);
+			cout << "Nhap ma sach can cap nhat: " << endl;
+			cin >> id_book;
+			s[i].setid(id_book);
+			cout << "Nhap the loai can cap nhat: " << endl;
+			cin >> type_book;
+			s[i].settype(type_book);
+			cout << "Nhap tac gia can cap nhat: " << endl;
+			cin >> author_book;
+			s[i].setauthor(author_book);
+			cout << "Nhap NXB can cap nhat: " << endl;
+			cin >> publisher_book;
+			s[i].setpublisher(publisher_book);
+			cout << "Nhap gia tien can cap nhat: " << endl;
+			cin >> price_book;
+			s[i].setprice(price_book);
+		}
+	}
+
 }

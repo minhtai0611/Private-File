@@ -14,4 +14,3 @@ public:
 	bool check_account(string _account);
 	void dest_account();
 };
-

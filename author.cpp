@@ -49,8 +49,8 @@ void author::dest() {
 	cout << "Nhap ten sach muon xoa: " << endl;
 	cin >> str;
 	s = arrbook.getarrbook();
-	for (int i = 0; i < s.size; i++) {
-		if (s[i]->getauthor != getaccount_user() || s[i]->getname() != str)
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i]->getauthor() != getaccount_user() || s[i]->getname() != str)
 			s.erase(s.begin() + i);
 	}
 	for (int i = 0; i < s.size(); i++)

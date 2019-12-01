@@ -13,8 +13,8 @@ public:
 	int getamount() { return amount; }
 	void settotal(int& _total) { total = _total; }
 	void setamount(int& _amount) { amount = _amount; }
-	/*void inbill(int &n);
-	void outbill(int n);*/
+	void inbill(vector<sach> s);
+	void outbill(int n);
 	const bool& operator==(const hoadon& bill);
 	const hoadon& operator=(const hoadon& bill);
 	friend istream& operator>>(istream& in, hoadon& bill);

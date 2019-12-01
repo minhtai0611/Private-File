@@ -21,8 +21,10 @@ public:
 	void setdefault_account_user(string _default_account_user) { default_account_user = _default_account_user; }
 	virtual void find();
 	void findbill();
-	virtual void add(sach& book1);
+	void add(vector<sach> s);
+	void add(sach _book);
 	void add(hoadon& bill1);
+	void add(mangsach _arrbook);
 	virtual void dest();
 	void destbill();
 	virtual void out(int n);

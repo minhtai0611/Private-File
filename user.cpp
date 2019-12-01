@@ -5,11 +5,21 @@ void user::find() {
 void user::findbill() {
 	arrbill.find();
 }
-void user::add(sach& book1) {
-	arrbook.add(book1);
+void user::add(vector<sach> s) {
+	hoadon bill;
+	bill.inbill(s);
+	arrbill.add(bill);
 }
 void user::add(hoadon& bill1) {
 	arrbill.add(bill1);
+}
+void add(sach _book) {
+	mangsach _arrbook;
+	_arrbook.add(_book);
+}
+void user::add(mangsach _arrbook) {
+	sach _book;
+	_arrbook.add(_book);
 }
 void user::dest() {
 	arrbook.dest();
