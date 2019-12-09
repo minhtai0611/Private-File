@@ -1,10 +1,10 @@
 #include "hoadon.h"
 void hoadon::inbill(vector<sach>s) {
 	int _number, _amount, _total;
-	/*for (int i = 0; i < s.size(); i++) {
+	for (int i = 0; i < s.size(); i++) {
 		cout<<"sach: "<<i+1<<endl;
-		cin >> s[i];
-	}*/
+		cout << s[i];
+	}
 	cout << "Nhap vao so thu tu cua sach muon mua" << endl;
 	cin >> _number;
 	cout << "Nhap so luong" << endl;
