@@ -1,13 +1,13 @@
 #include "admin_account.h"
 admin* admin_account::login() {
 	string _account, _password;
-	cout << "Tai khoan admin mac dinh";
+	cout << "Tai khoan admin mac dinh" << endl;
 	cout << "Tai khoan admin: defaultadmin" << endl;
 	cout << "Mat khau: defaultpassword" << endl;
 	cout << "Nhap tai khoan admin: ";
 	cin >> _account;
 	cout << endl;
-	cout << "Nhap mat khau admin";
+	cout << "Nhap mat khau admin: ";
 	cin >> _password;
 	cout << endl;
 	for (int i = 0; i < admin_data.size(); i++) {

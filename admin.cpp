@@ -17,7 +17,7 @@ void admin::add(mangsach _arrbook) {
 }
 void admin::out(mangsach _arrbook) {
 	int n;
-	cout << "So luong sach: ";
+	cout << "So luong sach ban da them vao: ";
 	cin >> n;
 	cout << endl;
 	_arrbook.out(n);

@@ -33,7 +33,7 @@ void publisher::out(int n) {
 	mangsach arrbook;
 	vector<sach*> s;
 	s = arrbook.getarrbook();
-	n = s.size();
+	s.resize(n);
 	for (int i = 0; i < s.size(); i++) {
 		if (s[i]->getpublisher() != getaccount_user() || s[i]->checkpublisher() == false)
 			s.erase(s.begin() + i);

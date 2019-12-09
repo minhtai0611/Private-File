@@ -46,6 +46,7 @@ void manghoadon::add(hoadon& bill1) {
 		else _totalbill += bill[i].gettotal();
 	}
 	totalbill = _totalbill;
+	cout << "Thanh toan: "<<totalbill << endl;
 }
 void manghoadon::find() {
 	string str;
@@ -78,4 +79,5 @@ void manghoadon::dest() {
 		_totalbill += bill[i].gettotal();
 	}
 	totalbill = _totalbill;
+	cout << "Thanh toan: " << totalbill << endl;
 }

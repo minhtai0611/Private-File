@@ -50,7 +50,7 @@ void main()
 					cout << endl;
 					book.resize(number_array);
 					book = new_customer.find(s, name);
-					new_customer.out(book);
+					//new_customer.out(book);
 					if (book.size() > 0) {
 						cout << "Ban co muon mua sach khong?" << endl;
 						cout << "1. Co" << endl;
@@ -67,7 +67,7 @@ void main()
 							else {
 								if (new_user->getdefault_account_user() == "user")
 								{
-									new_user->add(book);
+									new_user->add(s);
 									cout << "Xin chao " << new_user->getaccount_user() << " !" << endl;
 								}
 								if (new_user->getdefault_account_user() == "publisher") cout << "Xin chao NXB " << new_user->getaccount_user() << " !" << endl;
@@ -170,7 +170,7 @@ void main()
 					cin >> m;
 					switch (m) {
 					case 1:
-						new_user->out(number_array);
+						new_user->out(book.size());
 						break;
 					case 2:
 						/*cout << "Nhap ten sach can mua: ";

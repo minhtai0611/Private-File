@@ -6,6 +6,7 @@ void user::findbill() {
 	arrbill.find();
 }
 void user::add(vector<sach> s) {
+	int n = s.size();
 	hoadon bill;
 	bill.inbill(s);
 	arrbill.add(bill);

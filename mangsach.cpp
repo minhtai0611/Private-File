@@ -9,6 +9,7 @@ void mangsach::in(int& n) {
 }
 void mangsach::out(int n) {
 	cout << "Xuat ra mang cac phan tu sach" << endl;
+	s.resize(n);
 	for (int i = 0; i < s.size(); i++) {
 		cout << "sach " << i + 1 << endl;
 		cout << s[i];
@@ -19,6 +20,8 @@ void mangsach::add(sach& s1) {
 	for (int i = 0; i < s.size(); i++) {
 		cout << "Nhap vi tri muon them sach" << endl;
 		cin >> position;
+		cout << "Nhap vao sach can them vao" << endl;
+		cin >> s1;
 		s.insert(s.begin() + position - 1, s1);
 		break;
 	}
@@ -44,6 +47,40 @@ void mangsach::dest() {
 		}
 	}
 }
+void mangsach::outauthor(string _author) {
+	int count = 1;
+	int n = s.size();
+	if (n == 0)
+	{
+		cout << "Trong!" << endl;
+		return;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (s[i].getauthor() == _author) {
+			cout << "Sach thu " << count << endl;
+			cout << s[i];
+			count++;
+		}
+	}
+}
+void mangsach::outpublisher(string _publisher) {
+	int count = 1;
+	int n = s.size();
+	if (n == 0)
+	{
+		cout << "Trong!" << endl;
+		return;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (s[i].getpublisher() == _publisher) {
+			cout << "Sach thu " << count << endl;
+			cout << s[i];
+			count++;
+		}
+	}
+}
 void mangsach::updateprice() {
 	int newprice;
 	string str;
@@ -64,9 +101,9 @@ vector<sach> mangsach::find_book(string _name) {
 	vector<sach> _arrbook;
 	int n = s.size();
 	for (int i = 0; i < n; i++) {
-		if (_arrbook[i].getname() == _name) _arrbook.push_back(s[i]);
+		if (s[i].getname() == _name) cout << s[i];
 	}
-	return _arrbook;
+	return s;
 }
 vector<sach*> mangsach::getarrbook() {
 	vector<sach*> arrbook;

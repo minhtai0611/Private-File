@@ -10,6 +10,8 @@ public:
 	virtual void add(sach& s1);
 	virtual void find();
 	virtual void dest();
+	void outauthor(string _author);
+	void outpublisher(string _publisher);
 	void updateprice();
 	vector<sach*> getarrbook();
 	vector<sach> find_book(string _name);
