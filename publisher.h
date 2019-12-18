@@ -9,3 +9,4 @@ public:
 	void dest();
 	void out(int n);
 };
+

@@ -3,6 +3,7 @@
 #include"user.h"
 #include"data_account.h"
 #include"admin_account.h"
+#include"Notification.h"
 void main()
 {
 	admin_account admin_data;
@@ -15,6 +16,8 @@ void main()
 	vector<sach> book;
 	bool H_exit;
 	mangsach s;
+	Notification nofi;
+	s.input("Array_Lists.txt");
 	int number_array;
 	cout << "Nhap so luong sach: " << endl;
 	cin >> number_array;
@@ -82,7 +85,7 @@ void main()
 					if (new_user == NULL) cout << "Ten tai khoan hoac mat khau khau khong chinh xac!";
 					else {
 						system("cls");
-						if (new_user->getdefault_account_user() == "user") cout << "Xin chao " << new_user->getaccount_user ()<< " !" << endl;
+						if (new_user->getdefault_account_user() == "user") cout << "Xin chao " << new_user->getaccount_user() << " !" << endl;
 						if (new_user->getdefault_account_user() == "publisher") cout << "Xin chao NXB " << new_user->getdefault_account_user() << " !" << endl;
 						if (new_user->getdefault_account_user() == "author") cout << "Xin chao TG " << new_user->getdefault_account_user() << " !" << endl;
 					}
@@ -92,7 +95,7 @@ void main()
 					new_data_account.create_user();
 					break;
 				case 5:
-					new_admin= admin_data.login();
+					new_admin = admin_data.login();
 					if (new_admin == NULL) cout << "Khong ton tai Admin nay!" << endl;
 					else {
 						system("cls");
@@ -205,7 +208,7 @@ void main()
 				cout << "3. Xoa sach" << endl;
 				cout << "0. Dang xuat" << endl;
 				do {
-					cout  << "Nhap chuc nang: ";
+					cout << "Nhap chuc nang: ";
 					cin >> m;
 					switch (m) {
 					case 1:
@@ -231,4 +234,5 @@ void main()
 			}
 		}
 	} while (H_exit == false);
+	s.output("Array_Lists.txt");
 }

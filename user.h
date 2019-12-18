@@ -30,3 +30,4 @@ public:
 	virtual void out(int n);
 	void outbill(int n);
 };
+

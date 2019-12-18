@@ -141,3 +141,48 @@ void mangsach::update_book() {
 	}
 
 }
+void mangsach::input(string name) {
+	string s;
+	sach sach;
+	fstream f;
+	f.open(name);
+	vector<string> tokens;
+	while (!f.eof()) {
+		getline(f, s);
+		tokens = Tokenizer::Parse(s, " | ");
+		if (tokens.size() != 7) continue;
+		sach.setname(tokens[0]);
+		int a = stoi(tokens[1]);
+		sach.setid(a);
+		sach.settype(tokens[2]);
+		int b = stoi(tokens[3]);
+		sach.setprice(b);
+		sach.setauthor(tokens[4]);
+		sach.setpublisher(tokens[5]);
+		double c = stoi(tokens[6]);
+		sach.setsaleoff(c);
+		s.clear();
+	}
+	f.close();
+}
+void mangsach::output(string name) {
+	fstream f;
+	f.open(name, ios::out);
+	int n = s.size();
+	for (int i = 0; i < n; i++) {
+		f << s[i].getname();
+		f << " | ";
+		f << s[i].getid();
+		f << " | ";
+		f << s[i].gettype();
+		f << " | ";
+		f << s[i].getprice();
+		f << " | ";
+		f << s[i].getauthor();
+		f << " | ";
+		f << s[i].getpublisher();
+		f << " | ";
+		f << s[i].getsaleoff();
+		f << endl;
+	}
+}

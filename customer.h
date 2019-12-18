@@ -10,3 +10,4 @@ public:
 	void out(vector<sach> s);
 	vector<sach> find(mangsach _arrbook, string name);
 };
+

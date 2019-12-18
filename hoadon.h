@@ -20,3 +20,5 @@ public:
 	friend istream& operator>>(istream& in, hoadon& bill);
 	friend ostream& operator<<(ostream& out, hoadon& bill);
 };
+
+

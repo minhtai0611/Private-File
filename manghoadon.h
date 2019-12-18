@@ -14,3 +14,4 @@ public:
 	void find();
 	void dest();
 };
+

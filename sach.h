@@ -1,6 +1,9 @@
 #pragma once
 #include<iostream>
 #include<vector>
+#include<fstream>
+#include<iomanip>
+#include<string>
 using namespace std;
 class sach
 {
@@ -13,6 +16,7 @@ private:
 	int price;
 	bool bool_author;
 	bool bool_publisher;
+	double saleoff;
 public:
 	string getname() { return name; }
 	string gettype() { return type; }
@@ -20,12 +24,14 @@ public:
 	string getpublisher() { return publisher; }
 	int getid() { return id; }
 	int getprice() { return price; }
+	double getsaleoff() { return saleoff; }
 	void setname(string& _name) { name = _name; }
 	void settype(string& _type) { type = _type; }
 	void setauthor(string& _author) { author = _author; }
 	void setpublisher(string& _publisher) { publisher = _publisher; }
 	void setid(int& _id) { id = _id; }
 	void setprice(int& _price) { price = _price; }
+	void setsaleoff(double& x) { saleoff = x; }
 	friend istream& operator>>(istream& in, sach& s);
 	friend ostream& operator<<(ostream& out, sach& s);
 	const bool& operator==(const sach& s);
@@ -37,3 +43,5 @@ public:
 	bool checkauthor();
 	bool checkpublisher();
 };
+
+
